@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-scroll-container">
+        <div class="form-container">
+            <h2>Registration Form</h2>
+            <form id="registrationForm">
+                <label>
+                    First Name:
+                    <input type="text" name="firstName" required>
+                </label>
+                <br>
+
+                <label>
+                    Last Name:
+                    <input type="text" name="lastName" required>
+                </label>
+                <br>
+
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+                <br>
+
+                <label>
+                    Password:
+                    <input type="password" name="password" required>
+                </label>
+                <br>
+
+                <label>
+                    Confirm Password:
+                    <input type="password" name="confirmPassword" required>
+                </label>
+                <br>
+
+                <label>
+                    Country:
+                    <input type="text" name="country" required>
+                </label>
+                <br>
+
+                <label>
+                    City:
+                    <input type="text" name="city" required>
+                </label>
+                <br>
+
+                <label>
+                    Are you a working professional or a student?
+                    <select name="userType" id="userType" required>
+                        <option value="professional">Working Professional</option>
+                        <option value="student">Student</option>
+                    </select>
+                </label>
+                <br>
+
+                <div id="studentFields" style="display: none;">
+                    <label>
+                        College Name:
+                        <input type="text" name="collegeName">
+                    </label>
+                    <br>
+
+                    <label>
+                        Starting Year:
+                        <input type="text" name="startingYear">
+                    </label>
+                    <br>
+
+                    <label>
+                        Ending Year:
+                        <input type="text" name="endingYear">
+                    </label>
+                    <br>
+                    
+                    <label>
+                        Projects:
+                        <input type="text" name="endingYear">
+                    </label>
+                    <br>
+                    
+                    <label>
+                        Skills:
+                        <input type="text" name="endingYear">
+                    </label>
+                    <br>
+                </div>
+
+                <div id="professionalFields" style="display: none;">
+                    <label>
+                        Company Name:
+                        <input type="text" name="companyName">
+                    </label>
+                    <br>
+
+                    <label>
+                        Position:
+                        <input type="text" name="position">
+                    </label>
+                    <br>
+
+                    <label>
+                        Starting Year:
+                        <input type="text" name="profStartingYear">
+                    </label>
+                    <br>
+
+                    <label>
+                        Ending Year:
+                        <input type="text" name="profEndingYear">
+                    </label>
+                    <br>
+                    
+                    <label>
+                        Experience:
+                        <input type="text" name="endingYear">
+                    </label>
+                    <br>
+                    
+                    <label>
+                        Projects:
+                        <input type="text" name="endingYear">
+                    </label>
+                    <br>
+                    
+                    <label>
+                        Skills:
+                        <input type="text" name="endingYear">
+                    </label>
+                    <br>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+            <button class="go-back-button"><a href="../login/index.html">Back</a></button>
+        </div>
+        </div>
+    </div>
+    <script src="reg.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            window.addEventListener('scroll', function() {
+                var scrollPosition = window.scrollY;
+                document.getElementById('parallax-layer').style.transform = 'translateY(' + scrollPosition * 0.5 + 'px)';
+            });
+        });
+    </script> -->
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div id="scene">
+                <div class="layer" id="parallax-layer">
+                </div>
+            </div>
+            <div class="login">
+                <h2>Sign In</h2>
+                <div class="inputBox">
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="inputBox">
+                    <input type="password" placeholder="Password">
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Login" id="btn">
+                </div>
+                <div class="group">
+                    <button class="signupButton"> <a href="../reset/views/forgotPassword.hbs">Forgot Password</a></button>
+                   <button ><a href="../registration/registration.html">Sign Up</a></button>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./demo.js"></script>
+</body>
+</html>

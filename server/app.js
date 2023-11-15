@@ -8,14 +8,21 @@ app.use(express.json())
 const mongo=require("mongodb")
 const mongoose=require("mongoose");
 const dotenv=require("dotenv");
-const authRoutes=require("./routes/auth")
-const port=process.env.PORT||8000;
 
+const port=process.env.PORT||8000;
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const path = require('path');
 dotenv.config();
-const encodedPassword = encodeURIComponent('bebop#546');
+app.use(cors());
+app.use(bodyParser.json());
+
+const authRoutes=require("./routes/auth")
+
  
 mongoose.connect(
-    "mongodb+srv://bebopProfessional:${encodedPassword}@cluster0.hrjmafg.mongodb.net/?retryWrites=true&w=majority"
+   "mongodb+srv://shreyarakesh009:PPasworD010@cluster0.3lnzq8t.mongodb.net/"
+    
 
 ).then((x)=>{
     console.log("Connected to mongodb");
@@ -47,15 +54,21 @@ passport.use(new JwtStrategy(opts,async function(jwt_payload,done){
     
   }))
  
-
+  app.use(express.static(path.join(__dirname, '../client')));
 
  
 
-app.get("/",()=>{
-
+  app.get("/login",(req,res)=>{
+    res.sendFile(path.join(__dirname, '../client/login/index.html'));
+    
 })
 
+app.get("/register",(req,res)=>{
+    res.sendFile(path.join(__dirname, '../client/registration/registration.html'));
+    
+})
 
+ 
 app.use("/auth",authRoutes);
 app.listen(port,()=>{
     console.log(`server is listening on port ${port}`);

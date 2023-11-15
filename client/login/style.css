@@ -77,6 +77,19 @@ section{
     border:1px solid rgba(0,0,0,0.25);
     margin-bottom:30px;
 }
+.login .inputBox .btn{
+    position: relative;
+    width: 100%;
+    padding: 15px 20px;
+    outline:none;
+    font-size: 1.25rem;
+    color:#fff;
+    border-radius:5px;
+    background: rgba(0,0,0,0.15);
+    box-shadow:inset 0 0 15px rgba(0,0,0,0.25);
+    border:1px solid rgba(0,0,0,0.25);
+    margin-bottom:30px;
+}
 .login .inputBox ::placeholder{
     color:rgba(255,255,255,0.5);
 }
@@ -110,4 +123,8 @@ section{
     background-image:url('C:/Users/ASUS/OneDrive/Desktop/sakshi2/bebop_professionals/client/bebop/public/assets/cowboy.png');
     background-size:cover;
     transition:transform 0.2s;
+}
+.btn{
+background: linear-gradient(0deg,#F4D03F,#DC7633);
+color:#fff;
 }

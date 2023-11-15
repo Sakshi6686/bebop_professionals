@@ -11,8 +11,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (signupButton) {
       signupButton.addEventListener('click', function () {
-        // Communicate with the React app to open the registration page
+       
         window.parent.postMessage('signupButtonClicked', '*');
       });
     }
   });
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.querySelector('.login');
+
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // Collect form data
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Make AJAX request to the backend
+        try {
+            const res = await fetch('http://localhost:8000//auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const data = await res.json();
+
+             
+            if (res.ok) {
+                console.log('Login successful');
+            } else {
+ 
+                console.error('Login failed:', data.message);
+            }
+        } catch (err) {
+            console.error('Error:', err);
+        }
+    });
+});

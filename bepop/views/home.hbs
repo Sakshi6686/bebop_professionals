@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UrsTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowboy Bebop Professional Website</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+       <div class="navbar-left">
+        <a href="/cowboy" class= "logo"><img src="images/cb1.png" ></a>
+
+      
+
+        <div class="search-box">
+            <img src="images/search.png">
+            <input type="text" placeholder="search">
+        </div>
+       </div> 
+       <div class="navbar-center">
+        <ul>
+            <li><a href="#"><img src="images/home.png"><span>Home</span></a></li>
+            <li><a href="#"><img src="images/network.png"><span>My Network</span></a></li>
+            <li><a href="#"><img src="images/jobs.png"><span>Jobs</span></a></li>
+            <li><a href="#"><img src="images/message.png"><span>Messaging</span></a></li>
+            <li><a href="#"><img src="images/notification.png"><span>Notification</span></a></li>
+        </ul>
+       </div>
+       <div class="nav-bar-right">
+        <div class="online">
+        
+        <a href="/cowboy" >
+
+          {{#if user.profilePicture}}
+              <img src="/uploads/{{ user.profilePicture }}" alt="Profile Picture" class="nav-profile-img">
+          {{else}}
+            <p> No profile picture available</p>
+          {{/if}} 
+        </a>
+       </div>
+       
+    </div>
+    </nav>
+
+<div class="container">
+  <div class="left-sidebar">
+    <div class="sidebar-profile-box">
+      <img src="images/cover-pic.png" width="100%">
+      <div class="sidebar-profile-info">
+        {{#if user.profilePicture}}
+            <img src="/uploads/{{ user.profilePicture }}" alt="Profile Picture">
+        {{else}}
+           <p>No profile picture available</p>
+        {{/if}}
+        <h1>{{user.firstName}} {{user.lastName}}</h1>
+        <h3>{{user.position}} at {{user.position}}
+        <ul>
+          <li>Your profile views <span>52</span></li>
+          <li>Your post views <span>810</span></li>
+          <li>Your connection <span>205</span></li>
+          <li><a href="/upload/{{ user.email }}">Update Profile Picture</a></li>
+        </ul>
+        </h3>
+        </div>
+        <div class="sidebar-profile-link">
+          <a href="#"><img src="images/items.png">My Items</a>
+           <a href="#"><img src="images/premium.png">Try Premium</a>
+        </div>
+        
+      </div>
+      <div class="sidebar-activity">
+        <h3>RECENT</h3>
+        <a href="#"><img src="images/recent.png">Web Development</a>
+        <a href="#"><img src="images/recent.png">User Interface</a>
+        <a href="#"><img src="images/recent.png">Online Learning</a>
+        <a href="#"><img src="images/recent.png">Learn Online</a>
+        <a href="#"><img src="images/recent.png">Code Better</a>
+        <a href="#"><img src="images/recent.png">Group Learning</a>
+        <h3>GROUPS</h3>
+         <a href="#"><img src="images/group.png">Web Design Group</a>
+         <a href="#"><img src="images/group.png">HTML & CSS Learners</a>
+         <a href="#"><img src="images/group.png">Python & JavaScript</a>
+         <a href="#"><img src="images/group.png">Learn Coding Online</a>
+ <h3>HASHTAGS</h3>
+  <a href="#"><img src="images/hashtag.png">webdevelopment</a>
+          <a href="#"><img src="images/hashtag.png">userinterface</a>
+            <a href="#"><img src="images/hashtag.png">onlinelearner</a>
+            <div class="discover-more-link">
+              <a href="#">Discover More</a>
+            </div>
+      </div>
+    </div>
+ 
+  <div class="main-content">
+  <div class="create-post">
+    <div class="create-post-input">
+      {{#if user.profilePicture}}
+            <img src="/uploads/{{ user.profilePicture }}" alt="Profile Picture">
+        {{else}}
+           <p>No profile picture available</p>
+        {{/if}}
+      <textarea cols=rows="2" placeholder="Write a post"></textarea>
+    
+    </div>
+    <div class="create-post-links">
+      <li><img src="images/photo.png">Photo</li>
+      <li><img src="images/video.png">Video</li>
+      <li><img src="images/event.png">Event</li>
+      <li>Post</li>
+    </div>
+  </div>
+
+  <div class="sort-by">
+    <hr>
+    <p>Sort by:<span>top<img src="images/down-arrow.png"></span></p>
+  </div>
+
+<div class="post">
+  <div class="post-author">
+    <img src="images/user-3.png">
+    <div>
+      <h1>ABCD </h1>
+      <small> Founder and CEO at DEF Group</small>
+      <small> 2 hours ago</small>
+    </div>
+  </div>
+  <p>🏆 Exciting News: Honored to Win [Award Name]! 🏆
+
+I am thrilled to announce that I have been awarded [Award Name]! 🌟 I am truly humbled and grateful to receive this recognition. This achievement wouldn't have been possible without the incredible support of my team, mentors, and everyone who has been part of this journey.
+
+🙏 Thank you to [Organization/Event] for this prestigious award. It is a testament to the hard work, dedication, and passion that we pour into [Your Field/Industry]. This award inspires me to continue pushing boundaries and striving for excellence.
+
+</p>
+  <img src="images/post-image-1.png" width="100%">
+
+  <div class="post-status">
+    <div>
+      <img src="images/thumbsup.png">
+      <img src="images/love.png">
+      <img src="images/clap.png">
+      <span class="liked-users">AAA and 75 others</span>
+    </div>
+    <div>
+      <span>22 comments &middot; 40shares</span>
+    </div>
+  </div>
+  <div class="post-activity">
+  <div>
+    
+    {{#if user.profilePicture}}
+            <img src="/uploads/{{ user.profilePicture }}" alt="Profile Picture" class="post-activity-user-icon">
+        {{else}}
+           <p>No profile picture available</p>
+        {{/if}}
+    <img src="images/down-arrow.png" class="post-activity-arrow-icon">
+  </div>
+
+  <div class="post-activity-link">
+    <img src="images/like.png">
+    <span>Like</span>
+    </div>
+   <div class="post-activity-link">
+    <img src="images/comment.png">
+    <span>Comment</span>
+    </div>
+     <div class="post-activity-link">
+    <img src="images/share.png">
+    <span>Share</span>
+     </div>
+      <div class="post-activity-link">
+    <img src="images/send.png">
+    <span>Send</span>
+     <div class="post-activity-link"></div>
+    </div>
+</div>
+</div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="right-sidebar">
+  <div class="sidebar-news">
+    <img src="images/more.png" class="info-icon">
+    <h1>Trending News</h1>
+
+    <rssapp-ticker id="tpyGyQRDOQNN8PU1">
+
+    </rssapp-ticker><script src="https://widget.rss.app/v1/ticker.js" type="text/javascript" async></script>
+       
+    <a href="#">High demand for skilled manpower</a>
+    <span>1d ago &middot; 10,934 readers</span>
+
+     <a href="#">Careers growing horizontally too</a>
+    <span>1d ago &middot; 1,552 readers</span>
+
+     <a href="#">Less work visa for US, more for UK</a>
+    <span>19h ago &middot; 27,290 readers</span>
+
+     <a href="#">More hiring = higher confidence</a>
+    <span>1d ago &middot; 8,208 readers</span>
+
+     <a href="#">Gautam Adani is the world's richest</a>
+    <span>18h ago &middot; 4,205 readers</span>
+
+    <a href="#" class="read-more-link">Read more</a>
+
+  </div>
+  <div class="sidebar-ad">
+    <small>Ad &middot; &middot;</small>
+    <p>Master the 5 principles of web design</p>
+    <div>
+      {{#if user.profilePicture}}
+        <img src="/uploads/{{ user.profilePicture }}" alt="Profile Picture">
+     {{else}}
+        <p>No profile picture available</p>
+      {{/if}}
+      <img src="images/mi-logo.png">
+    </div>
+    <b>Brand and Demand in Xiaomi</b>
+    <a href="#" class="ad-link">Learn More</a>
+  </div>
+  <div class="sidebar-useful-links">
+    <a href="#">About</a>
+     <a href="#">Accessibility</a>
+      <a href="#">Help Center</a>
+       <a href="#">Privacy Policy</a>
+        <a href="#">Advertising</a>
+         <a href="#">Get the App</a>
+          <a href="#">More</a>
+          <div class="copright-msg">
+            <img src="images/logo.png">
+            <p>Bebop &#141;2023. All right reserved</p>
+          </div>
+
+  </div>
+</div>
+</div>
+
+   
+</body>
+</html>

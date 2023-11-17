@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Profile Picture</title>
+</head>
+<body>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <h1> Upload profile Picture for {{ email }} </h1>
+    <br>
+    <label for="profilePicture">Profile Picture:</label>
+    <input type="file" name="profilePicture" accept="image/*" required>
+    <br>
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Profile Picture</title>
+   <link rel="stylesheet" href="css/createPost.css">
+</head>
+<body>
+    <div class="container1">
+        
+            <form action="/createPostWithImage" method="post" enctype="multipart/form-data">
+                <h1> Create new post with image </h1>
+                <br>
+                <textarea id="postContent"  name="postContent" placeholder="Write a post" required="true" class="textarea"></textarea>
+                <br>
+                <label for="postImage">Select Image:</label>
+                <input type="file" name="postImage" accept="image/*" required>
+                <br>
+                <button type="submit" class="button">Post</button>
+                <br>
+                <a href="javascript:window. history. back();">Back to home page</a>
+            </form>
+       
+    </div>
+</body>
+</html>

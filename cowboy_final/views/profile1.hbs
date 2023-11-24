@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+</head>
+    <body>
+        
+       
+            
+           
+
+            <h1>Personal Informtion</h1>
+            <br>
+
+                <ul>
+                <li>First Name:  <span>{{ user.firstName }}</span></li>
+                <li>Last Name:  <span>{{ user.lastName }}</span></li>
+                <li>Email Id:  <span>{{ user.email }}</span></li>
+                <li>Country:  <span>{{ user.country }}</span></li>
+                <li>City:  <span>{{ user.city }}</span></li>
+                <li>User Type: <span>{{ user.userType }}</span></li>
+                
+                </ul>
+
+                <h2>Educational Details</h2>
+                <br>
+
+                <ul>
+                <li>College Name:  <span>{{ user.collegeName }}</span></li>
+                <li>College Start Year:  <span>{{ user.startingYear }}</span></li>
+                <li>College End Year:  <span>{{ user.endingYear }}</span></li>       
+                </ul>
+
+                <h2>Professional Information</h2>
+
+                <ul>
+                <li>Company Name:  <span>{{ user.companyName }}</span></li>
+                <li>Position:  <span>{{ user.position }}</span></li>
+                <li>Skills:  <span>{{ user.skills }}</span></li>
+                <li>Projects:  <span>{{ user.projects }}</span></li>
+                <li>Experience:  <span>{{ user.experience }}</span></li>
+                <li>Profession Start Year:  <span>{{ user.profStartingYear }}</span></li>
+                <li>Profession End Year: <span>{{ user.profEndingYear }}</span></li>
+                
+                <br>
+
+                
+                <a href="javascript:window. history. back();">Back to home page</a>
+                </ul>
+       
+       
+    </body>
+</html>
